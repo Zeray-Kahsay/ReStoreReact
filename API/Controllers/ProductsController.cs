@@ -13,14 +13,13 @@ namespace API.Controllers
     [Route("api/[controller]")]
     public class ProductsController : ControllerBase
     {
-       
+
         private readonly StoreContext _context;
         
         public ProductsController(StoreContext context)
         {
             _context = context;
-            
-            
+    
         }
 
         [HttpGet]
@@ -36,6 +35,6 @@ namespace API.Controllers
         {
             return await _context.Products.FindAsync(id);
         }
-        
+    
     }
 }
